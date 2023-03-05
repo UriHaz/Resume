@@ -435,6 +435,18 @@ modal.onclick = function() {
   }, 500); // adjust the duration of the fade-out here (in milliseconds)
 }
 
+// When the user presses the Esc key, close the modal
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape' || event.key === 'Esc') {
+	modal.style.opacity = "0";
+    modal.style.display = "none";
+    menu.classList.remove("hidden");
+    backtotop.classList.add('active');
+    body.classList.remove("modal-open");
+    hamburger.classList.remove('hidden');
+  }
+});
+	
 // Get the modal element and the menu element
 var menu = document.getElementById("navbar");
 var hamburger = document.getElementsByClassName("mobile-nav-toggle")[0];
