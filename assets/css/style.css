@@ -387,12 +387,16 @@ h6 {
 
 .read-more:hover {
 	
-	  background-color: #45505b;
-	    color: #fff;
+	 	opacity: 0.8;
+		  color: #fff;
+
 }
 
+
 .read-more:visited {
-  background-color: #0563bb;
+	opacity: 0.6;
+	  color: #fff;
+
 }
 
 
