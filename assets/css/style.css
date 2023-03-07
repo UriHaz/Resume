@@ -389,9 +389,10 @@ h6 {
 	
 	  background-color: #45505b;
 	    color: #fff;
+}
 
-
-
+.read-more:active {
+  background-color: #0563bb;
 }
 
 
