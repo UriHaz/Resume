@@ -435,7 +435,8 @@ document.addEventListener('keydown', function(event) {
 // When the user presses the back key on mobile, close the modal
 window.addEventListener('popstate', function(event) {
   if (modal.style.display !== 'none') {
-	modal.style.opacity = "0";
+    event.preventDefault(); // prevent the page from scrolling to the top
+    modal.style.opacity = "0";
   setTimeout(function() {
     modal.style.display = "none";
     modal.style.opacity = "1";
