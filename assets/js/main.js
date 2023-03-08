@@ -434,15 +434,15 @@ document.addEventListener('keydown', function(event) {
 
 // When the user presses the back key on mobile, close the modal
 window.addEventListener('popstate', function(event) {
-  if (document.getElementById('modal').style.display !== 'none') {
+  if (modal.style.display !== 'none') {
 	modal.style.opacity = "0";
   setTimeout(function() {
     modal.style.display = "none";
     modal.style.opacity = "1";
     menu.classList.remove("hidden");
-	backtotop.classList.add('active');
-	body.classList.remove("modal-open");
-	hamburger.classList.remove('hidden');
+    backtotop.classList.add('active');
+    body.classList.remove("modal-open");
+    hamburger.classList.remove('hidden');
 
 
   }, 500)
