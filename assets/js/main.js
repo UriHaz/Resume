@@ -432,10 +432,10 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
-// When the user presses the back key on mobile, close the modal
+// When the user presses the back key on mobile
 window.addEventListener('popstate', function(event) {
-  event.preventDefault(); // Add this line
   if (modal.style.display !== 'none') {
+    // Close the modal
     modal.style.opacity = "0";
     setTimeout(function() {
       modal.style.display = "none";
@@ -444,9 +444,13 @@ window.addEventListener('popstate', function(event) {
       backtotop.classList.add('active');
       body.classList.remove("modal-open");
       hamburger.classList.remove('hidden');
-    }, 500)
+    }, 500);
+
+    // Push a new state to prevent navigation back
+    window.history.pushState(null, null, window.location.href);
   }
 });
+
 
 
 
