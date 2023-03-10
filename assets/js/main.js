@@ -446,10 +446,11 @@ window.addEventListener('popstate', function(event) {
       hamburger.classList.remove('hidden');
     }, 500);
 
-    // Push a new state to prevent navigation back
-    window.history.pushState(null, null, window.location.href);
+    // Replace the current state with a new state to prevent navigation back
+    history.replaceState({modalOpen: true}, null, window.location.href);
   }
 });
+
 
 
 
